@@ -1,0 +1,38 @@
+# --- Core Libraries ---
+python-dotenv # 환경 변수 관리 (선택 사항)
+pandas # 데이터 처리 (기업 목록, 행렬 등)
+lxml # XML 파싱 (dart_utils 또는 fallback에서 사용)
+dart-fss # DART 공시 다운로드 (직접 다운로드 기능 사용 시)
+beautifulsoup4 # HTML/XML 파싱 (fallback 파서에서 사용)
+tqdm # 진행률 표시
+openpyxl # 엑셀 파일 로드 (KOSPI 맵)
+networkx # 그래프 생성 및 처리 (matrix_builder 실패 시 또는 직접 사용 시)
+scipy # matrix_builder 내부에서 희소 행렬 등에 사용될 수 있음
+
+# --- Langchain Core & Integrations ---
+langchain
+langchain_huggingface # HuggingFace 모델 연동
+langchain_community # Document Loaders (PyPDF), Vector Stores (FAISS) 등
+
+# --- LLM & Embeddings (HuggingFace) ---
+torch # PyTorch 필수
+transformers # HuggingFace 모델 로드/사용
+accelerate # 모델 로딩/추론 가속화
+bitsandbytes # 모델 양자화 (GPU 메모리 절약)
+sentence-transformers # 임베딩 모델 로드/사용
+
+# --- Vector Store ---
+# faiss-gpu # FAISS (GPU 버전 - CUDA 환경 필요)
+faiss-cpu # FAISS (CPU 버전 - GPU 없을 시 또는 호환성 문제 시)
+
+# --- Document Loading ---
+pypdf # PDF 로딩 (PyPDFLoader)
+# unstructured # 고급 문서 처리 (선택 사항, 필요시 설치)
+# !pip install "unstructured[all-docs]" # Colab에서 설치 시
+
+# --- 기존 Azure 라이브러리 (제거됨) ---
+# azure-search-documents
+# azure-ai-documentintelligence
+# azure-identity
+# azure-core
+# langchain-openai (Azure OpenAI 관련 의존성 제거)
